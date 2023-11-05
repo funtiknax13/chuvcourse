@@ -12,8 +12,6 @@
 ```
 SECRET_KEY=
 DEBUG=
-DB_NAME=
-DB_USERNAME=
 DB_PASSWORD=
 ```
 
@@ -29,14 +27,21 @@ DB_PASSWORD=
 /lesson/?ordering=course - сортировка уроков по курсу
 ```
 
+Для создания образа из Dockerfile и запуска контейнера:
+```
+docker compose up --build
+```
+
 Для запуска приложения:
 ```
 python3 manage.py runserver
 ```
+
 Для тестирования проекта:
 ```
 python3 manage.py test
 ```
+
 Для запуска подсчета покрытия и вывода отчета запустить команды:
 ```
 coverage run --source='.' manage.py test
